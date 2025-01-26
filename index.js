@@ -16,7 +16,7 @@ const s3Router = require("./routes/s3Router")
 
 // mongodbConnection("mongodb://127.0.0.1:27017/taskmanagementDB")
 
-mongodbConnection("mongodb+srv://160030018:EW5UjsOkG486Kpce@cluster0.5thia.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0")
+mongodbConnection(`mongodb+srv://160030018:${process.env.MONGODB_PASSWORD}@cluster0.5thia.mongodb.net/test?retryWrites=true&w=majority&appName=Cluster0`)
 
 
 const app= express();
