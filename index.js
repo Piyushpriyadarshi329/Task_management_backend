@@ -11,7 +11,6 @@ const s3Router = require("./routes/s3Router")
 
 
 
-console.log(`Your port is ${process.env.PORT}`); // 8626
 
 
 

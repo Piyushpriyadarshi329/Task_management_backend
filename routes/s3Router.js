@@ -1,5 +1,12 @@
 
 const express= require("express")
+const dotenv = require('dotenv');
+dotenv.config();
+
+const BUCKET_NAME=process.env.BUCKET_NAME 
+const AWS_ACCESSKEYID=process.env.AWS_ACCESSKEYID
+const AWS_SECRETACCESSKEY=process.env.AWS_SECRETACCESSKEY
+const AWS_REGION=process.env.AWS_REGION
 
 const router= express.Router()
 
