@@ -37,7 +37,6 @@ const patchUserHandler= async(req,res)=>{
 const loginHandler= async(req,res)=>{
     try {
         let user=await   User.find({email:req.body.email,password:req.body.password});
-        console.log("user",user)
         if(user.length){
             res.status(200).json({user,success:true})
 
@@ -55,7 +54,6 @@ const loginHandler= async(req,res)=>{
 
 const changePasswordHandler=async(req,res)=>{
    try {
-    console.log("req,body",req.body)
     let user=await   User.updateOne({email:req.body.email},{$set:{password:req.body.password}});
     res.status(200).json({user,success:true})
     
